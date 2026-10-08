@@ -1,71 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp">
 
     <TextView
-        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Constraint Layout 실습"
-        android:textSize="20sp"
+        android:text="LinearLayout 실습"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#76A84B"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp" />
+        android:layout_marginBottom="30dp" />
 
     <ImageView
-        android:id="@+id/dice1"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:src="@drawable/dice1"
-        android:scaleType="fitCenter"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/dice2"
-        android:layout_marginTop="30dp" />
-
-    <ImageView
-        android:id="@+id/dice2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:src="@drawable/dice1"
-        android:scaleType="fitCenter"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintStart_toEndOf="@id/dice1"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp" />
-
-    <EditText
-        android:id="@+id/etAnswer"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:hint="합계는?"
-        android:gravity="center"
-        android:inputType="number"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/dice1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
-
-    <Button
-        android:id="@+id/btnResult"
+        android:id="@+id/bgImage"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:text="결과보기"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        android:backgroundTint="#4DC1D9"
-        app:layout_constraintTop_toBottomOf="@id/etAnswer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="15dp" />
+        android:layout_height="180dp"
+        android:src="@drawable/bg"
+        android:scaleType="fitCenter" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/btn1m"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp" />
+
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/btn2m"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/btn3m"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
